@@ -1,0 +1,6 @@
+framework module Pods_Starling_Tech_TestTests {
+  umbrella header "Pods-Starling-Tech-TestTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
