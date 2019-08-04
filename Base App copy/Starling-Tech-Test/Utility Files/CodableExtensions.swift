@@ -1,8 +1,8 @@
 //
-//  CodableExtensions.swift
-//  Starling-Tech-Test
+//  Codable.swift
+//  ListingsApp
 //
-//  Created by Christie Davis on 27/07/19.
+//  Created by Christie Davis on 4/08/19.
 //  Copyright © 2019 Christie-Davis. All rights reserved.
 //
 
