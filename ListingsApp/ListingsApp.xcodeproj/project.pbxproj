@@ -18,6 +18,7 @@
 		F5BC3C7622F6DD5A006C3B7B /* BaseNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC3C7422F6DD59006C3B7B /* BaseNetworkService.swift */; };
 		F5BC3C7722F6DD5A006C3B7B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC3C7322F6DD59006C3B7B /* NetworkService.swift */; };
 		F5BC3C7822F6DD5A006C3B7B /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC3C7522F6DD5A006C3B7B /* ServiceFactory.swift */; };
+		F5BC3C7B22F6E17E006C3B7B /* JobDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC3C7A22F6E17E006C3B7B /* JobDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		F5BC3C7322F6DD59006C3B7B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F5BC3C7422F6DD59006C3B7B /* BaseNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkService.swift; sourceTree = "<group>"; };
 		F5BC3C7522F6DD5A006C3B7B /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
+		F5BC3C7A22F6E17E006C3B7B /* JobDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				F5BC3C6622F6DC0E006C3B7B /* Resources */,
 				F58BAF8422F6DA32006E97DD /* AppDelegate.swift */,
 				F58BAF8622F6DA32006E97DD /* ViewController.swift */,
+				F5BC3C7922F6E11F006C3B7B /* NetworkModels */,
 				F5BC3C6C22F6DD47006C3B7B /* Network Service */,
 				F5BC3C6722F6DC60006C3B7B /* Utility Files */,
 			);
@@ -159,6 +162,14 @@
 				F5BC3C7422F6DD59006C3B7B /* BaseNetworkService.swift */,
 			);
 			path = "Network Service";
+			sourceTree = "<group>";
+		};
+		F5BC3C7922F6E11F006C3B7B /* NetworkModels */ = {
+			isa = PBXGroup;
+			children = (
+				F5BC3C7A22F6E17E006C3B7B /* JobDTO.swift */,
+			);
+			path = NetworkModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5BC3C7822F6DD5A006C3B7B /* ServiceFactory.swift in Sources */,
+				F5BC3C7B22F6E17E006C3B7B /* JobDTO.swift in Sources */,
 				F5BC3C7622F6DD5A006C3B7B /* BaseNetworkService.swift in Sources */,
 				F5BC3C6922F6DC6F006C3B7B /* CodableExtensions.swift in Sources */,
 				F5BC3C7722F6DD5A006C3B7B /* NetworkService.swift in Sources */,
