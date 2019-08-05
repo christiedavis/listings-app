@@ -10,7 +10,7 @@ import Foundation
 import PromiseKit
 
 protocol JobNetworkServiceProtocol: class {
-    func getJobs() -> Promise<[JobDTO]>
+    func getJobs() -> Promise<JobCollectionDTO>
 }
 
 class JobNetworkService: BaseNetworkService {
@@ -19,7 +19,7 @@ class JobNetworkService: BaseNetworkService {
 }
 
 extension JobNetworkService: JobNetworkServiceProtocol {
-    func getJobs() -> Promise<[JobDTO]> {
+    func getJobs() -> Promise<JobCollectionDTO> {
         return self.request(method: .get, path: self.accountsPath, parameters: nil)        
     }
 }

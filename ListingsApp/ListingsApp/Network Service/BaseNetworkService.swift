@@ -81,11 +81,39 @@ extension BaseNetworkService: BaseServiceProtocol {
 
                             seal.fulfill(result)
                         } catch let error {
+                            let decodingMessage = error.decodingErrorDescription()
+                            print(decodingMessage)
                             seal.reject(ServiceError.invalidDataDecoding)
                             return
                         }
                     }
                 })
         }
+    }
+}
+
+extension Error {
+    public func decodingErrorDescription() -> String {
+        let jsonMarker = "**** JSON ****"
+        if let decodingError = self as? DecodingError {
+            switch decodingError {
+            case .dataCorrupted(let context):
+                if context.underlyingError != nil {
+                    return "\(jsonMarker) DATACORRUPTED \(context.underlyingError.debugDescription)"
+                } else {
+                    return "\(jsonMarker) DATACORRUPTED \(context)"
+                }
+            case .typeMismatch(_, let context):
+                return "\(jsonMarker) 👩‍🦰 TYPEMISMATCH \(context)"
+            case .keyNotFound(let codingKey, let context):
+                return "\(jsonMarker) 🧸 KEYNOTFOUND \(codingKey) \(context)"
+            case .valueNotFound(_, let context):
+                return "\(jsonMarker) VALUENOTFOUND \(context)"
+            default:
+                return "\(jsonMarker) UNKNOWN ERROR"
+                
+            }
+        }
+        return "No decodingError found"
     }
 }

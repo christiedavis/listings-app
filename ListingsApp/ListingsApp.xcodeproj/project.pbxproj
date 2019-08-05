@@ -19,6 +19,8 @@
 		F591DADF22F82A5400FC215E /* ListingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F591DADE22F82A5400FC215E /* ListingsPresenter.swift */; };
 		F591DAE122F82AEA00FC215E /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F591DAE022F82AEA00FC215E /* BasePresenter.swift */; };
 		F591DAE322F82F8500FC215E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F591DAE222F82F8500FC215E /* DataService.swift */; };
+		F591DAE522F831BC00FC215E /* JobCollectionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F591DAE422F831BC00FC215E /* JobCollectionDTO.swift */; };
+		F591DAE722F835FB00FC215E /* JobApplicationDetailsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F591DAE622F835FB00FC215E /* JobApplicationDetailsDTO.swift */; };
 		F5BC3C6922F6DC6F006C3B7B /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC3C6822F6DC6F006C3B7B /* CodableExtensions.swift */; };
 		F5BC3C7622F6DD5A006C3B7B /* BaseNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC3C7422F6DD59006C3B7B /* BaseNetworkService.swift */; };
 		F5BC3C7722F6DD5A006C3B7B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC3C7322F6DD59006C3B7B /* NetworkService.swift */; };
@@ -57,6 +59,8 @@
 		F591DADE22F82A5400FC215E /* ListingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsPresenter.swift; sourceTree = "<group>"; };
 		F591DAE022F82AEA00FC215E /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		F591DAE222F82F8500FC215E /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		F591DAE422F831BC00FC215E /* JobCollectionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCollectionDTO.swift; sourceTree = "<group>"; };
+		F591DAE622F835FB00FC215E /* JobApplicationDetailsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplicationDetailsDTO.swift; sourceTree = "<group>"; };
 		F5BC3C6822F6DC6F006C3B7B /* CodableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CodableExtensions.swift; path = "../../../Base App copy/Starling-Tech-Test/Utility Files/CodableExtensions.swift"; sourceTree = "<group>"; };
 		F5BC3C7322F6DD59006C3B7B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F5BC3C7422F6DD59006C3B7B /* BaseNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkService.swift; sourceTree = "<group>"; };
@@ -199,6 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				F5BC3C7A22F6E17E006C3B7B /* JobDTO.swift */,
+				F591DAE422F831BC00FC215E /* JobCollectionDTO.swift */,
+				F591DAE622F835FB00FC215E /* JobApplicationDetailsDTO.swift */,
 			);
 			path = NetworkModels;
 			sourceTree = "<group>";
@@ -379,10 +385,12 @@
 			files = (
 				F5BC3C7822F6DD5A006C3B7B /* ServiceFactory.swift in Sources */,
 				F5BC3C7B22F6E17E006C3B7B /* JobDTO.swift in Sources */,
+				F591DAE522F831BC00FC215E /* JobCollectionDTO.swift in Sources */,
 				F591DADC22F82A0200FC215E /* ListingsViewController.swift in Sources */,
 				F591DAE322F82F8500FC215E /* DataService.swift in Sources */,
 				F5BC3C7622F6DD5A006C3B7B /* BaseNetworkService.swift in Sources */,
 				F5BC3C6922F6DC6F006C3B7B /* CodableExtensions.swift in Sources */,
+				F591DAE722F835FB00FC215E /* JobApplicationDetailsDTO.swift in Sources */,
 				F5BC3C7722F6DD5A006C3B7B /* NetworkService.swift in Sources */,
 				F591DAD822F8286D00FC215E /* AppCoordinator.swift in Sources */,
 				F58BAF8D22F6DA32006E97DD /* ListingsApp.xcdatamodeld in Sources */,

@@ -10,7 +10,7 @@ import Foundation
 import PromiseKit
 
 protocol ServiceFactoryProtocol {
-    func getJobs() -> Promise<[JobDTO]>
+    func getJobs() -> Promise<JobCollectionDTO>
 }
 
 class ServiceFactory {
@@ -32,7 +32,7 @@ class ServiceFactory {
 }
 
 extension ServiceFactory: ServiceFactoryProtocol {
-    func getJobs() -> Promise<[JobDTO]> {
+    func getJobs() -> Promise<JobCollectionDTO> {
         return self.networkService.getJobs()
     }
 
