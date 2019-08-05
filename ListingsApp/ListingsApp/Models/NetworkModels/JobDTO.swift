@@ -44,8 +44,5 @@ struct JobDTO: Codable {
         case body = "Body"
         case instructions = "Instructions"
         case applicationDetails = "JobApplicationDetails"
-
-        
-
     }
 }

@@ -26,6 +26,7 @@
 		F594F64722F8AE4F0028C59E /* JobDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594F64522F8AE4F0028C59E /* JobDetailsViewController.swift */; };
 		F594F64822F8AE4F0028C59E /* JobDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F594F64622F8AE4F0028C59E /* JobDetailsViewController.xib */; };
 		F594F64A22F8AE600028C59E /* JobDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594F64922F8AE600028C59E /* JobDetailPresenter.swift */; };
+		F594F65822F8BA440028C59E /* ManagedObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594F65722F8BA440028C59E /* ManagedObjectExtension.swift */; };
 		F5BC3C6922F6DC6F006C3B7B /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC3C6822F6DC6F006C3B7B /* CodableExtensions.swift */; };
 		F5BC3C7622F6DD5A006C3B7B /* BaseNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC3C7422F6DD59006C3B7B /* BaseNetworkService.swift */; };
 		F5BC3C7722F6DD5A006C3B7B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC3C7322F6DD59006C3B7B /* NetworkService.swift */; };
@@ -71,6 +72,7 @@
 		F594F64522F8AE4F0028C59E /* JobDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsViewController.swift; sourceTree = "<group>"; };
 		F594F64622F8AE4F0028C59E /* JobDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobDetailsViewController.xib; sourceTree = "<group>"; };
 		F594F64922F8AE600028C59E /* JobDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailPresenter.swift; sourceTree = "<group>"; };
+		F594F65722F8BA440028C59E /* ManagedObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjectExtension.swift; sourceTree = "<group>"; };
 		F5BC3C6822F6DC6F006C3B7B /* CodableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CodableExtensions.swift; path = "../../../Base App copy/Starling-Tech-Test/Utility Files/CodableExtensions.swift"; sourceTree = "<group>"; };
 		F5BC3C7322F6DD59006C3B7B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F5BC3C7422F6DD59006C3B7B /* BaseNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkService.swift; sourceTree = "<group>"; };
@@ -145,8 +147,8 @@
 				F5BC3C6622F6DC0E006C3B7B /* Resources */,
 				F591DAD922F8298000FC215E /* View Controllers */,
 				F58BAF8422F6DA32006E97DD /* AppDelegate.swift */,
-				F5BC3C7922F6E11F006C3B7B /* NetworkModels */,
-				F5BC3C6C22F6DD47006C3B7B /* Network Service */,
+				F594F64E22F8B9BD0028C59E /* Models */,
+				F5BC3C6C22F6DD47006C3B7B /* Services */,
 				F5BC3C6722F6DC60006C3B7B /* Utility Files */,
 			);
 			path = ListingsApp;
@@ -193,6 +195,22 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		F594F64D22F8B9B00028C59E /* CoreDataModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreDataModels;
+			sourceTree = "<group>";
+		};
+		F594F64E22F8B9BD0028C59E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F5BC3C7922F6E11F006C3B7B /* NetworkModels */,
+				F594F64D22F8B9B00028C59E /* CoreDataModels */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F5BC3C6622F6DC0E006C3B7B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,11 +225,12 @@
 			isa = PBXGroup;
 			children = (
 				F5BC3C6822F6DC6F006C3B7B /* CodableExtensions.swift */,
+				F594F65722F8BA440028C59E /* ManagedObjectExtension.swift */,
 			);
 			path = "Utility Files";
 			sourceTree = "<group>";
 		};
-		F5BC3C6C22F6DD47006C3B7B /* Network Service */ = {
+		F5BC3C6C22F6DD47006C3B7B /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				F5BC3C7522F6DD5A006C3B7B /* ServiceFactory.swift */,
@@ -219,7 +238,7 @@
 				F591DAE222F82F8500FC215E /* DataService.swift */,
 				F5BC3C7422F6DD59006C3B7B /* BaseNetworkService.swift */,
 			);
-			path = "Network Service";
+			path = Services;
 			sourceTree = "<group>";
 		};
 		F5BC3C7922F6E11F006C3B7B /* NetworkModels */ = {
