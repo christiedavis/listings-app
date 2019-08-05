@@ -26,7 +26,8 @@
 		F594F64722F8AE4F0028C59E /* JobDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594F64522F8AE4F0028C59E /* JobDetailsViewController.swift */; };
 		F594F64822F8AE4F0028C59E /* JobDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F594F64622F8AE4F0028C59E /* JobDetailsViewController.xib */; };
 		F594F64A22F8AE600028C59E /* JobDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594F64922F8AE600028C59E /* JobDetailPresenter.swift */; };
-		F594F65822F8BA440028C59E /* ManagedObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594F65722F8BA440028C59E /* ManagedObjectExtension.swift */; };
+		F594F67722F8BF7E0028C59E /* Listing+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594F67522F8BF7E0028C59E /* Listing+CoreDataClass.swift */; };
+		F594F67822F8BF7E0028C59E /* Listing+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594F67622F8BF7E0028C59E /* Listing+CoreDataProperties.swift */; };
 		F5BC3C6922F6DC6F006C3B7B /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC3C6822F6DC6F006C3B7B /* CodableExtensions.swift */; };
 		F5BC3C7622F6DD5A006C3B7B /* BaseNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC3C7422F6DD59006C3B7B /* BaseNetworkService.swift */; };
 		F5BC3C7722F6DD5A006C3B7B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC3C7322F6DD59006C3B7B /* NetworkService.swift */; };
@@ -73,6 +74,8 @@
 		F594F64622F8AE4F0028C59E /* JobDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobDetailsViewController.xib; sourceTree = "<group>"; };
 		F594F64922F8AE600028C59E /* JobDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailPresenter.swift; sourceTree = "<group>"; };
 		F594F65722F8BA440028C59E /* ManagedObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjectExtension.swift; sourceTree = "<group>"; };
+		F594F67522F8BF7E0028C59E /* Listing+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Listing+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F594F67622F8BF7E0028C59E /* Listing+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Listing+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F5BC3C6822F6DC6F006C3B7B /* CodableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CodableExtensions.swift; path = "../../../Base App copy/Starling-Tech-Test/Utility Files/CodableExtensions.swift"; sourceTree = "<group>"; };
 		F5BC3C7322F6DD59006C3B7B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F5BC3C7422F6DD59006C3B7B /* BaseNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkService.swift; sourceTree = "<group>"; };
@@ -143,6 +146,7 @@
 		F58BAF8322F6DA32006E97DD /* ListingsApp */ = {
 			isa = PBXGroup;
 			children = (
+				F58BAF8B22F6DA32006E97DD /* ListingsApp.xcdatamodeld */,
 				F591DAD622F8285700FC215E /* Coordinator */,
 				F5BC3C6622F6DC0E006C3B7B /* Resources */,
 				F591DAD922F8298000FC215E /* View Controllers */,
@@ -198,6 +202,8 @@
 		F594F64D22F8B9B00028C59E /* CoreDataModels */ = {
 			isa = PBXGroup;
 			children = (
+				F594F67522F8BF7E0028C59E /* Listing+CoreDataClass.swift */,
+				F594F67622F8BF7E0028C59E /* Listing+CoreDataProperties.swift */,
 			);
 			path = CoreDataModels;
 			sourceTree = "<group>";
@@ -216,7 +222,6 @@
 			children = (
 				F58BAF9022F6DA32006E97DD /* LaunchScreen.storyboard */,
 				F58BAF9322F6DA32006E97DD /* Info.plist */,
-				F58BAF8B22F6DA32006E97DD /* ListingsApp.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -427,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F594F67822F8BF7E0028C59E /* Listing+CoreDataProperties.swift in Sources */,
 				F5BC3C7822F6DD5A006C3B7B /* ServiceFactory.swift in Sources */,
 				F5BC3C7B22F6E17E006C3B7B /* JobDTO.swift in Sources */,
 				F591DAE522F831BC00FC215E /* JobCollectionDTO.swift in Sources */,
@@ -437,6 +443,7 @@
 				F5BC3C6922F6DC6F006C3B7B /* CodableExtensions.swift in Sources */,
 				F591DAE722F835FB00FC215E /* JobApplicationDetailsDTO.swift in Sources */,
 				F594F64722F8AE4F0028C59E /* JobDetailsViewController.swift in Sources */,
+				F594F67722F8BF7E0028C59E /* Listing+CoreDataClass.swift in Sources */,
 				F5BC3C7722F6DD5A006C3B7B /* NetworkService.swift in Sources */,
 				F591DAD822F8286D00FC215E /* AppCoordinator.swift in Sources */,
 				F58BAF8D22F6DA32006E97DD /* ListingsApp.xcdatamodeld in Sources */,
