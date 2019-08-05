@@ -18,5 +18,12 @@ extension Listing {
     }
 
     @NSManaged public var identifier: String?
+    @NSManaged public var title: String?
+    @NSManaged public var jobType: String?
+    @NSManaged public var body: String?
+    @NSManaged public var location: String?
+    @NSManaged public var company: String?
+    @NSManaged public var instructions: String?
+    @NSManaged public var has: ListingProperties?
 
 }

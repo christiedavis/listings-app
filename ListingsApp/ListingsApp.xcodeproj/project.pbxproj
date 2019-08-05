@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D98EE14DE73C728D5D7E4BBA /* Pods_ListingsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029F0C3C1B0BF81450993201 /* Pods_ListingsAppTests.framework */; };
 		D996EC7268AEFD96C08EA5F8 /* Pods_ListingsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB59E6DF94EB39F41E6BD67 /* Pods_ListingsApp.framework */; };
+		F54F2F5C22F8F62C00084F24 /* PersistanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F2F5B22F8F62C00084F24 /* PersistanceHelper.swift */; };
 		F58BAF8522F6DA32006E97DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58BAF8422F6DA32006E97DD /* AppDelegate.swift */; };
 		F58BAF8D22F6DA32006E97DD /* ListingsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F58BAF8B22F6DA32006E97DD /* ListingsApp.xcdatamodeld */; };
 		F58BAF9222F6DA32006E97DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58BAF9022F6DA32006E97DD /* LaunchScreen.storyboard */; };
@@ -28,6 +29,8 @@
 		F594F64A22F8AE600028C59E /* JobDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594F64922F8AE600028C59E /* JobDetailPresenter.swift */; };
 		F594F67722F8BF7E0028C59E /* Listing+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594F67522F8BF7E0028C59E /* Listing+CoreDataClass.swift */; };
 		F594F67822F8BF7E0028C59E /* Listing+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594F67622F8BF7E0028C59E /* Listing+CoreDataProperties.swift */; };
+		F594F67E22F8F3F50028C59E /* ListingProperties+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594F67C22F8F3F50028C59E /* ListingProperties+CoreDataClass.swift */; };
+		F594F67F22F8F3F50028C59E /* ListingProperties+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594F67D22F8F3F50028C59E /* ListingProperties+CoreDataProperties.swift */; };
 		F5BC3C6922F6DC6F006C3B7B /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC3C6822F6DC6F006C3B7B /* CodableExtensions.swift */; };
 		F5BC3C7622F6DD5A006C3B7B /* BaseNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC3C7422F6DD59006C3B7B /* BaseNetworkService.swift */; };
 		F5BC3C7722F6DD5A006C3B7B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC3C7322F6DD59006C3B7B /* NetworkService.swift */; };
@@ -52,6 +55,7 @@
 		8767BC657FD79C10FC174400 /* Pods-ListingsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListingsApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ListingsApp/Pods-ListingsApp.release.xcconfig"; sourceTree = "<group>"; };
 		DF5571AE3B1C7A6E7FB36BC2 /* Pods-ListingsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListingsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ListingsApp/Pods-ListingsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E7F1DA46783092C52DFDBE29 /* Pods-ListingsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListingsAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ListingsAppTests/Pods-ListingsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F54F2F5B22F8F62C00084F24 /* PersistanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceHelper.swift; sourceTree = "<group>"; };
 		F58BAF8122F6DA32006E97DD /* ListingsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListingsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58BAF8422F6DA32006E97DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F58BAF8C22F6DA32006E97DD /* ListingsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ListingsApp.xcdatamodel; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 		F594F65722F8BA440028C59E /* ManagedObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjectExtension.swift; sourceTree = "<group>"; };
 		F594F67522F8BF7E0028C59E /* Listing+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Listing+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F594F67622F8BF7E0028C59E /* Listing+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Listing+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F594F67C22F8F3F50028C59E /* ListingProperties+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListingProperties+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F594F67D22F8F3F50028C59E /* ListingProperties+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListingProperties+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F5BC3C6822F6DC6F006C3B7B /* CodableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CodableExtensions.swift; path = "../../../Base App copy/Starling-Tech-Test/Utility Files/CodableExtensions.swift"; sourceTree = "<group>"; };
 		F5BC3C7322F6DD59006C3B7B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F5BC3C7422F6DD59006C3B7B /* BaseNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkService.swift; sourceTree = "<group>"; };
@@ -202,6 +208,8 @@
 		F594F64D22F8B9B00028C59E /* CoreDataModels */ = {
 			isa = PBXGroup;
 			children = (
+				F594F67C22F8F3F50028C59E /* ListingProperties+CoreDataClass.swift */,
+				F594F67D22F8F3F50028C59E /* ListingProperties+CoreDataProperties.swift */,
 				F594F67522F8BF7E0028C59E /* Listing+CoreDataClass.swift */,
 				F594F67622F8BF7E0028C59E /* Listing+CoreDataProperties.swift */,
 			);
@@ -242,6 +250,7 @@
 				F5BC3C7322F6DD59006C3B7B /* NetworkService.swift */,
 				F591DAE222F82F8500FC215E /* DataService.swift */,
 				F5BC3C7422F6DD59006C3B7B /* BaseNetworkService.swift */,
+				F54F2F5B22F8F62C00084F24 /* PersistanceHelper.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -439,6 +448,7 @@
 				F591DADC22F82A0200FC215E /* ListingsViewController.swift in Sources */,
 				F591DAE322F82F8500FC215E /* DataService.swift in Sources */,
 				F5BC3C7622F6DD5A006C3B7B /* BaseNetworkService.swift in Sources */,
+				F594F67E22F8F3F50028C59E /* ListingProperties+CoreDataClass.swift in Sources */,
 				F594F64322F8AB180028C59E /* ListingTableViewCell.swift in Sources */,
 				F5BC3C6922F6DC6F006C3B7B /* CodableExtensions.swift in Sources */,
 				F591DAE722F835FB00FC215E /* JobApplicationDetailsDTO.swift in Sources */,
@@ -446,10 +456,12 @@
 				F594F67722F8BF7E0028C59E /* Listing+CoreDataClass.swift in Sources */,
 				F5BC3C7722F6DD5A006C3B7B /* NetworkService.swift in Sources */,
 				F591DAD822F8286D00FC215E /* AppCoordinator.swift in Sources */,
+				F54F2F5C22F8F62C00084F24 /* PersistanceHelper.swift in Sources */,
 				F58BAF8D22F6DA32006E97DD /* ListingsApp.xcdatamodeld in Sources */,
 				F594F64A22F8AE600028C59E /* JobDetailPresenter.swift in Sources */,
 				F58BAF8522F6DA32006E97DD /* AppDelegate.swift in Sources */,
 				F591DADF22F82A5400FC215E /* ListingsPresenter.swift in Sources */,
+				F594F67F22F8F3F50028C59E /* ListingProperties+CoreDataProperties.swift in Sources */,
 				F591DAE122F82AEA00FC215E /* BasePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
