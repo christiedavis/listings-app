@@ -10,10 +10,15 @@
 		D98EE14DE73C728D5D7E4BBA /* Pods_ListingsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029F0C3C1B0BF81450993201 /* Pods_ListingsAppTests.framework */; };
 		D996EC7268AEFD96C08EA5F8 /* Pods_ListingsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB59E6DF94EB39F41E6BD67 /* Pods_ListingsApp.framework */; };
 		F58BAF8522F6DA32006E97DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58BAF8422F6DA32006E97DD /* AppDelegate.swift */; };
-		F58BAF8722F6DA32006E97DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58BAF8622F6DA32006E97DD /* ViewController.swift */; };
 		F58BAF8D22F6DA32006E97DD /* ListingsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F58BAF8B22F6DA32006E97DD /* ListingsApp.xcdatamodeld */; };
 		F58BAF9222F6DA32006E97DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58BAF9022F6DA32006E97DD /* LaunchScreen.storyboard */; };
 		F58BAF9D22F6DA33006E97DD /* ListingsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58BAF9C22F6DA33006E97DD /* ListingsAppTests.swift */; };
+		F591DAD822F8286D00FC215E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F591DAD722F8286D00FC215E /* AppCoordinator.swift */; };
+		F591DADC22F82A0200FC215E /* ListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F591DADA22F82A0200FC215E /* ListingsViewController.swift */; };
+		F591DADD22F82A0200FC215E /* ListingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F591DADB22F82A0200FC215E /* ListingsViewController.xib */; };
+		F591DADF22F82A5400FC215E /* ListingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F591DADE22F82A5400FC215E /* ListingsPresenter.swift */; };
+		F591DAE122F82AEA00FC215E /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F591DAE022F82AEA00FC215E /* BasePresenter.swift */; };
+		F591DAE322F82F8500FC215E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F591DAE222F82F8500FC215E /* DataService.swift */; };
 		F5BC3C6922F6DC6F006C3B7B /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC3C6822F6DC6F006C3B7B /* CodableExtensions.swift */; };
 		F5BC3C7622F6DD5A006C3B7B /* BaseNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC3C7422F6DD59006C3B7B /* BaseNetworkService.swift */; };
 		F5BC3C7722F6DD5A006C3B7B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC3C7322F6DD59006C3B7B /* NetworkService.swift */; };
@@ -40,13 +45,18 @@
 		E7F1DA46783092C52DFDBE29 /* Pods-ListingsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListingsAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ListingsAppTests/Pods-ListingsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F58BAF8122F6DA32006E97DD /* ListingsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListingsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58BAF8422F6DA32006E97DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F58BAF8622F6DA32006E97DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F58BAF8C22F6DA32006E97DD /* ListingsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ListingsApp.xcdatamodel; sourceTree = "<group>"; };
 		F58BAF9122F6DA32006E97DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F58BAF9322F6DA32006E97DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F58BAF9822F6DA32006E97DD /* ListingsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListingsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58BAF9C22F6DA33006E97DD /* ListingsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsAppTests.swift; sourceTree = "<group>"; };
 		F58BAF9E22F6DA33006E97DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F591DAD722F8286D00FC215E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F591DADA22F82A0200FC215E /* ListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsViewController.swift; sourceTree = "<group>"; };
+		F591DADB22F82A0200FC215E /* ListingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListingsViewController.xib; sourceTree = "<group>"; };
+		F591DADE22F82A5400FC215E /* ListingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsPresenter.swift; sourceTree = "<group>"; };
+		F591DAE022F82AEA00FC215E /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		F591DAE222F82F8500FC215E /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		F5BC3C6822F6DC6F006C3B7B /* CodableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CodableExtensions.swift; path = "../../../Base App copy/Starling-Tech-Test/Utility Files/CodableExtensions.swift"; sourceTree = "<group>"; };
 		F5BC3C7322F6DD59006C3B7B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F5BC3C7422F6DD59006C3B7B /* BaseNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkService.swift; sourceTree = "<group>"; };
@@ -117,9 +127,10 @@
 		F58BAF8322F6DA32006E97DD /* ListingsApp */ = {
 			isa = PBXGroup;
 			children = (
+				F591DAD622F8285700FC215E /* Coordinator */,
 				F5BC3C6622F6DC0E006C3B7B /* Resources */,
+				F591DAD922F8298000FC215E /* View Controllers */,
 				F58BAF8422F6DA32006E97DD /* AppDelegate.swift */,
-				F58BAF8622F6DA32006E97DD /* ViewController.swift */,
 				F5BC3C7922F6E11F006C3B7B /* NetworkModels */,
 				F5BC3C6C22F6DD47006C3B7B /* Network Service */,
 				F5BC3C6722F6DC60006C3B7B /* Utility Files */,
@@ -134,6 +145,25 @@
 				F58BAF9E22F6DA33006E97DD /* Info.plist */,
 			);
 			path = ListingsAppTests;
+			sourceTree = "<group>";
+		};
+		F591DAD622F8285700FC215E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F591DAD722F8286D00FC215E /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F591DAD922F8298000FC215E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F591DADE22F82A5400FC215E /* ListingsPresenter.swift */,
+				F591DADA22F82A0200FC215E /* ListingsViewController.swift */,
+				F591DADB22F82A0200FC215E /* ListingsViewController.xib */,
+				F591DAE022F82AEA00FC215E /* BasePresenter.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		F5BC3C6622F6DC0E006C3B7B /* Resources */ = {
@@ -159,6 +189,7 @@
 			children = (
 				F5BC3C7522F6DD5A006C3B7B /* ServiceFactory.swift */,
 				F5BC3C7322F6DD59006C3B7B /* NetworkService.swift */,
+				F591DAE222F82F8500FC215E /* DataService.swift */,
 				F5BC3C7422F6DD59006C3B7B /* BaseNetworkService.swift */,
 			);
 			path = "Network Service";
@@ -257,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F58BAF9222F6DA32006E97DD /* LaunchScreen.storyboard in Resources */,
+				F591DADD22F82A0200FC215E /* ListingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,12 +379,16 @@
 			files = (
 				F5BC3C7822F6DD5A006C3B7B /* ServiceFactory.swift in Sources */,
 				F5BC3C7B22F6E17E006C3B7B /* JobDTO.swift in Sources */,
+				F591DADC22F82A0200FC215E /* ListingsViewController.swift in Sources */,
+				F591DAE322F82F8500FC215E /* DataService.swift in Sources */,
 				F5BC3C7622F6DD5A006C3B7B /* BaseNetworkService.swift in Sources */,
 				F5BC3C6922F6DC6F006C3B7B /* CodableExtensions.swift in Sources */,
 				F5BC3C7722F6DD5A006C3B7B /* NetworkService.swift in Sources */,
-				F58BAF8722F6DA32006E97DD /* ViewController.swift in Sources */,
+				F591DAD822F8286D00FC215E /* AppCoordinator.swift in Sources */,
 				F58BAF8D22F6DA32006E97DD /* ListingsApp.xcdatamodeld in Sources */,
 				F58BAF8522F6DA32006E97DD /* AppDelegate.swift in Sources */,
+				F591DADF22F82A5400FC215E /* ListingsPresenter.swift in Sources */,
+				F591DAE122F82AEA00FC215E /* BasePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

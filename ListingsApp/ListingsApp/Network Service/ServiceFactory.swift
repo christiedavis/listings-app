@@ -10,7 +10,7 @@ import Foundation
 import PromiseKit
 
 protocol ServiceFactoryProtocol {
-    func getUserAccounts() -> Promise<BankAccountCollectionDTO>
+    func getJobs() -> Promise<[JobDTO]>
 }
 
 class ServiceFactory {
@@ -25,14 +25,15 @@ class ServiceFactory {
     }
     
     init() {
-        self.networkService = AccountNetworkService()
+        self.networkService = JobNetworkService()
     }
     
-    var networkService: AccountNetworkServiceProtocol
+    var networkService: JobNetworkServiceProtocol
 }
 
 extension ServiceFactory: ServiceFactoryProtocol {
-    func getUserAccounts() -> Promise<BankAccountCollectionDTO> {
-        return self.networkService.getUserAccounts()
+    func getJobs() -> Promise<[JobDTO]> {
+        return self.networkService.getJobs()
     }
+
 }

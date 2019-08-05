@@ -17,8 +17,8 @@ internal protocol BaseServiceProtocol {
 
 class BaseNetworkService {
     
-    internal let defaultEndpointEncoder: JSONEncoder
-    internal let defaultEndpointDecoder: JSONDecoder
+    internal let defaultEndpointEncoder: JSONEncoder = JSONEncoder()
+    internal let defaultEndpointDecoder: JSONDecoder = JSONDecoder()
     
     internal var sessionManager: SessionManager = Alamofire.SessionManager.default
     let consumerKey = "1B52E3035B3082867BB52FD91B4607BB"
@@ -27,7 +27,7 @@ class BaseNetworkService {
     let tokenSecret = "C53F68AB74D371F97024D7FBF18D88C0"
     
     internal func retrieveBasedURL(_ endpoint: String) -> URL? {
-        return URL(string: "https://api.trademe.co.nz/v1/\(endpoint)?file_format=json")
+        return URL(string: "https://api.tmsandbox.co.nz/v1/\(endpoint)")
     }
     
     /// retrieves the headers for the service endpoint.
@@ -35,7 +35,7 @@ class BaseNetworkService {
         var headerDict: [String: String] = [:]
         
         headerDict["Authorization"] = "OAuth oauth_consumer_key=" + self.consumerKey +
-        ", oauth_signature_method=PLAINTEXT, oauth_signature=" + consumerSecret
+        ", oauth_signature_method=PLAINTEXT, oauth_signature=" + consumerSecret + "&"
         headerDict["Accept"] = "application/json"
         headerDict["User-Agent"] = "christie-davis"
         return headerDict
@@ -58,10 +58,6 @@ extension BaseNetworkService: BaseServiceProtocol {
     }
 
     internal func request<T: Decodable>(url: URL, method: HTTPMethod, parameters: Parameters? = nil) -> Promise<T> {
-
-        guard let sessionManager = sessionManager else {
-            return Promise(error: ServiceError.requestFailed)
-        }
 
         return Promise { seal in
 

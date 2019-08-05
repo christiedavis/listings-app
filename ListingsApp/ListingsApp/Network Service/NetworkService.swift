@@ -14,12 +14,12 @@ protocol JobNetworkServiceProtocol: class {
 }
 
 class JobNetworkService: BaseNetworkService {
-    private let accountsPath = "/accounts"
-    private var transactionFeedPath = "/feed/account/012b2ab8-d0f4-4aa3-ab8e-028fabbd228f/category/75ffc012-5854-4735-8ba5-810a2992b104"
+    private let accountsPath = "Search/Jobs.json"
+
 }
 
 extension JobNetworkService: JobNetworkServiceProtocol {
     func getJobs() -> Promise<[JobDTO]> {
-        
+        return self.request(method: .get, path: self.accountsPath, parameters: nil)        
     }
 }
