@@ -10,24 +10,46 @@ import UIKit
 import PromiseKit
 
 protocol ListingsPresenterProcotocol {
-    
+    func numRows() -> Int
+    func jobForRow(_ row: Int) -> JobDTO?
+    func selectRow(_ row: Int)
 }
 
 class ListingsPresenter: BasePresenter {
     
     weak var view: ListingsViewController?
     weak var coordinator: AppCoordinatorDelegate?
+    
+    var jobList: [JobDTO] = []
 }
 
 extension ListingsPresenter: ListingsPresenterProcotocol {
     func load() {
         _ = self.serviceFactory.getJobs()
             .done { [weak self] (jobList) in
-                print(jobList)
+                self?.jobList = jobList.list ?? []
+                self?.view?.reloadView()
             }
             .catch { (error) in
                 print(error)
         }
         
+    }
+    
+    func numRows() -> Int {
+        return jobList.count
+    }
+    
+    func jobForRow(_ row: Int) -> JobDTO? {
+        if row >= 0 && row < jobList.count {
+            return jobList[row]
+        }
+        return nil
+    }
+    
+    func selectRow(_ row: Int) {
+        if let job = self.jobForRow(row) {
+            self.coordinator?.goToJobDetails(job)
+        }
     }
 }

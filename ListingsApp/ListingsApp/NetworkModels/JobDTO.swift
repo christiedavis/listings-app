@@ -11,6 +11,15 @@ import UIKit
 enum JobType: String, Codable {
     case fulltime = "FT"
     case parttime = "PT"
+    
+    func toDisplayString() -> String {
+        switch self {
+        case .fulltime:
+            return "Fulltime"
+        case .parttime:
+            return "Parttime"
+        }
+    }
 
 }
 

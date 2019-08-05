@@ -21,6 +21,11 @@
 		F591DAE322F82F8500FC215E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F591DAE222F82F8500FC215E /* DataService.swift */; };
 		F591DAE522F831BC00FC215E /* JobCollectionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F591DAE422F831BC00FC215E /* JobCollectionDTO.swift */; };
 		F591DAE722F835FB00FC215E /* JobApplicationDetailsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F591DAE622F835FB00FC215E /* JobApplicationDetailsDTO.swift */; };
+		F594F64322F8AB180028C59E /* ListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594F64122F8AB180028C59E /* ListingTableViewCell.swift */; };
+		F594F64422F8AB180028C59E /* ListingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F594F64222F8AB180028C59E /* ListingTableViewCell.xib */; };
+		F594F64722F8AE4F0028C59E /* JobDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594F64522F8AE4F0028C59E /* JobDetailsViewController.swift */; };
+		F594F64822F8AE4F0028C59E /* JobDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F594F64622F8AE4F0028C59E /* JobDetailsViewController.xib */; };
+		F594F64A22F8AE600028C59E /* JobDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594F64922F8AE600028C59E /* JobDetailPresenter.swift */; };
 		F5BC3C6922F6DC6F006C3B7B /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC3C6822F6DC6F006C3B7B /* CodableExtensions.swift */; };
 		F5BC3C7622F6DD5A006C3B7B /* BaseNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC3C7422F6DD59006C3B7B /* BaseNetworkService.swift */; };
 		F5BC3C7722F6DD5A006C3B7B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC3C7322F6DD59006C3B7B /* NetworkService.swift */; };
@@ -61,6 +66,11 @@
 		F591DAE222F82F8500FC215E /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		F591DAE422F831BC00FC215E /* JobCollectionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCollectionDTO.swift; sourceTree = "<group>"; };
 		F591DAE622F835FB00FC215E /* JobApplicationDetailsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplicationDetailsDTO.swift; sourceTree = "<group>"; };
+		F594F64122F8AB180028C59E /* ListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingTableViewCell.swift; sourceTree = "<group>"; };
+		F594F64222F8AB180028C59E /* ListingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListingTableViewCell.xib; sourceTree = "<group>"; };
+		F594F64522F8AE4F0028C59E /* JobDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsViewController.swift; sourceTree = "<group>"; };
+		F594F64622F8AE4F0028C59E /* JobDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobDetailsViewController.xib; sourceTree = "<group>"; };
+		F594F64922F8AE600028C59E /* JobDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailPresenter.swift; sourceTree = "<group>"; };
 		F5BC3C6822F6DC6F006C3B7B /* CodableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CodableExtensions.swift; path = "../../../Base App copy/Starling-Tech-Test/Utility Files/CodableExtensions.swift"; sourceTree = "<group>"; };
 		F5BC3C7322F6DD59006C3B7B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F5BC3C7422F6DD59006C3B7B /* BaseNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkService.swift; sourceTree = "<group>"; };
@@ -162,12 +172,25 @@
 		F591DAD922F8298000FC215E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F591DAE022F82AEA00FC215E /* BasePresenter.swift */,
+				F594F63E22F8AAF10028C59E /* Cells */,
 				F591DADE22F82A5400FC215E /* ListingsPresenter.swift */,
 				F591DADA22F82A0200FC215E /* ListingsViewController.swift */,
 				F591DADB22F82A0200FC215E /* ListingsViewController.xib */,
-				F591DAE022F82AEA00FC215E /* BasePresenter.swift */,
+				F594F64922F8AE600028C59E /* JobDetailPresenter.swift */,
+				F594F64522F8AE4F0028C59E /* JobDetailsViewController.swift */,
+				F594F64622F8AE4F0028C59E /* JobDetailsViewController.xib */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F594F63E22F8AAF10028C59E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F594F64122F8AB180028C59E /* ListingTableViewCell.swift */,
+				F594F64222F8AB180028C59E /* ListingTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		F5BC3C6622F6DC0E006C3B7B /* Resources */ = {
@@ -294,7 +317,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F58BAF9222F6DA32006E97DD /* LaunchScreen.storyboard in Resources */,
+				F594F64822F8AE4F0028C59E /* JobDetailsViewController.xib in Resources */,
 				F591DADD22F82A0200FC215E /* ListingsViewController.xib in Resources */,
+				F594F64422F8AB180028C59E /* ListingTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,11 +414,14 @@
 				F591DADC22F82A0200FC215E /* ListingsViewController.swift in Sources */,
 				F591DAE322F82F8500FC215E /* DataService.swift in Sources */,
 				F5BC3C7622F6DD5A006C3B7B /* BaseNetworkService.swift in Sources */,
+				F594F64322F8AB180028C59E /* ListingTableViewCell.swift in Sources */,
 				F5BC3C6922F6DC6F006C3B7B /* CodableExtensions.swift in Sources */,
 				F591DAE722F835FB00FC215E /* JobApplicationDetailsDTO.swift in Sources */,
+				F594F64722F8AE4F0028C59E /* JobDetailsViewController.swift in Sources */,
 				F5BC3C7722F6DD5A006C3B7B /* NetworkService.swift in Sources */,
 				F591DAD822F8286D00FC215E /* AppCoordinator.swift in Sources */,
 				F58BAF8D22F6DA32006E97DD /* ListingsApp.xcdatamodeld in Sources */,
+				F594F64A22F8AE600028C59E /* JobDetailPresenter.swift in Sources */,
 				F58BAF8522F6DA32006E97DD /* AppDelegate.swift in Sources */,
 				F591DADF22F82A5400FC215E /* ListingsPresenter.swift in Sources */,
 				F591DAE122F82AEA00FC215E /* BasePresenter.swift in Sources */,

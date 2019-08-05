@@ -10,6 +10,8 @@ import UIKit
 
 protocol AppCoordinatorDelegate: class {
     func enterApp()
+    
+    func goToJobDetails(_ job: JobDTO)
 }
 
 class AppCoordinator {
@@ -34,6 +36,14 @@ extension AppCoordinator: AppCoordinatorDelegate {
     func goToUsersAccountView() {
         let viewController = ListingsViewController()
         viewController.presenter.coordinator = self
+        
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func goToJobDetails(_ job: JobDTO) {
+        let viewController = JobDetailsViewController()
+        viewController.presenter.coordinator = self
+        viewController.presenter.job = job
         
         navigationController?.pushViewController(viewController, animated: true)
     }
