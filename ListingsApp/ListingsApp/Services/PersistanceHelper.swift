@@ -14,7 +14,7 @@ import PromiseKit
     func saveContext()
     func loadPersistentStores() -> Promise<NSPersistentContainer>
     static func shared() -> PersistenceHelperProtocol
-    func managedObjectContext() -> NSManagedObjectContext 
+    func managedObjectContext() -> NSManagedObjectContext
 }
 
 public class PersistenceHelper: PersistenceHelperProtocol {
@@ -69,9 +69,6 @@ public class PersistenceHelper: PersistenceHelperProtocol {
             do {
                 try context.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                let nserror = error as NSError
-//                Logger.error("♨️ Unresolved error \(nserror), \(nserror.userInfo) ♨️", forSubsystem: .services)
                 assertionFailure("♐️ saveContext() failed.")
             }
         }

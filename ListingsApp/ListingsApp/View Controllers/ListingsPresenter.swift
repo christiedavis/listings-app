@@ -27,7 +27,7 @@ extension ListingsPresenter: ListingsPresenterProcotocol {
     func load() {
         _ = self.serviceFactory.getJobs()
             .done { [weak self] (jobList) in
-                self?.jobList = jobList.list ?? []
+                self?.jobList = jobList.list?.sorted(by: { $0.listingId ?? 0 > $1.listingId ?? 0 }) ?? [] // TODO: This is not an overly relevant way to sort these,but allows for consistency
                 self?.view?.reloadView()
             }
             .catch { (error) in
