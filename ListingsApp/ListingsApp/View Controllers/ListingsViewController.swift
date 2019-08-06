@@ -11,11 +11,22 @@ import PromiseKit
 
 protocol ListingsViewProtocol {
     func reloadView()
+    
+    func showLoading()
+    func hideLoading()
+    func showError(_ errorMessage: String)
+    func hideError()
 }
 
 class ListingsViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
+    
+    @IBOutlet var errorLabel: UILabel!
+    @IBOutlet var errorButton: UIButton!
+    @IBOutlet var errorView: UIView!
+    
+    @IBOutlet var loadingView: UIActivityIndicatorView!
     
     let presenter = ListingsPresenter()
     
@@ -27,6 +38,8 @@ class ListingsViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        self.navigationItem.title = "Latest Jobs Available" // TODO: strings should be localized
+        
         self.tableView.register(UINib(nibName: ListingTableViewCell.reuseIdentifier(), bundle: nil), forCellReuseIdentifier: ListingTableViewCell.reuseIdentifier())
     }
     
@@ -37,12 +50,35 @@ class ListingsViewController: UIViewController {
             self.tableView.deselectRow(at: selectionIndexPath, animated: animated)
         }
     }
+    
+    @IBAction func errorTapped(_ sender: Any) {
+        self.hideError()
+        self.presenter.load()
+    }
 }
 
 extension ListingsViewController: ListingsViewProtocol {
     func reloadView() {
         tableView.reloadData()
     }
+    
+    func showLoading() {
+        self.loadingView.isHidden = false
+    }
+    
+    func hideLoading() {
+        self.loadingView.isHidden = true
+    }
+    
+    func showError(_ errorMessage: String) {
+        self.errorView.isHidden = false
+        self.errorLabel.text = errorMessage
+    }
+    
+    func hideError() {
+        self.errorView.isHidden = true
+    }
+
 }
 
 extension ListingsViewController: UITableViewDelegate, UITableViewDataSource {

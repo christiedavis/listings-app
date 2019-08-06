@@ -34,7 +34,9 @@ class ServiceFactory {
 }
 
 extension ServiceFactory: ServiceFactoryProtocol {
+    //TODO: this would be good to come back to test further and further test the logic.
     func getJobs() -> Promise<JobCollectionDTO> {
+        // We could extend it by setting up a cache time (eg 24 hours) - so we update less regularly, and use less data
         return self.networkService.getJobs()
             .recover { (error) -> Guarantee<JobCollectionDTO> in
                 let cachedJobs = self.dataService.getJobs()

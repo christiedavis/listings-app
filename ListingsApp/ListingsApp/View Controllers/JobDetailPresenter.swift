@@ -13,6 +13,7 @@ protocol JobDetailPresenterProtocol {
     var jobDisplay: JobDTO? { get }
     var screenTitle: String { get }
     
+    func shouldDisplayApplyButton() -> Bool
     func applyTapped()
 }
 
@@ -35,13 +36,23 @@ extension JobDetailPresenter: JobDetailPresenterProtocol {
     
     var screenTitle: String {
         if let jobTitle = self.job?.title {
-            return "Here are the application details for: \(jobTitle)"
+            return jobTitle
         } else {
             return "There has been an error loading this screen"
         }
     }
     
+    func shouldDisplayApplyButton() -> Bool {
+       
+        if let url = self.getJobAction() {
+            return UIApplication.shared.canOpenURL(url)
+        }
+        return false
+    }
+    
     func applyTapped() {
+        // I'd like to extend this by making it only show the button if you can open the url
+        
         if let url = self.getJobAction() {
             
             let svc = SFSafariViewController(url: url)

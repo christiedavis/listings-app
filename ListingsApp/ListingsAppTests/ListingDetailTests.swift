@@ -23,13 +23,28 @@ class ListingDetailTests: XCTestCase {
     
     func testJobAction() {
         XCTAssertNil(self.presenter.getJobAction())
+        XCTAssertNil(self.presenter.jobDisplay)
+        
         self.presenter.job = JobDTO(listingId: nil, title: "Astronaut", body: nil, jobLocation: nil, jobType: nil, company: nil, instructions: nil, applicationDetails: JobApplicationDetailsDTO(applicationType: nil, contactName: nil, website: "www.alphero.com"))
         
         XCTAssertNotNil(self.presenter.getJobAction())
+        XCTAssertNotNil(self.presenter.jobDisplay)
         
         self.presenter.job = JobDTO(listingId: nil, title: "Astronaut", body: nil, jobLocation: nil, jobType: nil, company: nil, instructions: nil, applicationDetails: JobApplicationDetailsDTO(applicationType: nil, contactName: nil, website: "----t-rrt4$%^*@&)(#_@{}:@@@@"))
 
         XCTAssertNil(self.presenter.getJobAction())
 
+    }
+    
+    func testUsableURL() {
+        
+        XCTAssertFalse(presenter.shouldDisplayApplyButton())
+        
+        self.presenter.job = JobDTO(listingId: nil, title: "Astronaut", body: nil, jobLocation: nil, jobType: nil, company: nil, instructions: nil, applicationDetails: JobApplicationDetailsDTO(applicationType: nil, contactName: nil, website: "-christie"))
+        
+        XCTAssertFalse(presenter.shouldDisplayApplyButton())
+        self.presenter.job = JobDTO(listingId: nil, title: "Astronaut", body: nil, jobLocation: nil, jobType: nil, company: nil, instructions: nil, applicationDetails: JobApplicationDetailsDTO(applicationType: nil, contactName: nil, website: "https://www.alphero.com"))
+
+        XCTAssert(presenter.shouldDisplayApplyButton())
     }
 }

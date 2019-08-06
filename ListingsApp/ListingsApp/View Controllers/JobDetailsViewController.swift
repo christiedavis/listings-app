@@ -16,7 +16,6 @@ class JobDetailsViewController: UIViewController {
     let presenter = JobDetailPresenter()
     
     @IBOutlet var screenTitleLabel: UILabel!
-    @IBOutlet var jobTitleLabel: UILabel!
     @IBOutlet var complanyLable: UILabel!
     @IBOutlet var listingLabel: UILabel!
     @IBOutlet var listingLocationLabel: UILabel!
@@ -40,7 +39,6 @@ class JobDetailsViewController: UIViewController {
         self.screenTitleLabel.text = self.presenter.screenTitle
         
         if let job = self.presenter.jobDisplay {
-            self.jobTitleLabel.text = job.title
             if let listingID = job.listingId {
                 self.listingLabel.text = "\(listingID)"
             } else {
@@ -54,6 +52,8 @@ class JobDetailsViewController: UIViewController {
             if let contactName = job.applicationDetails?.contactName {
                 self.contactNameLAbel.text = "Apply with: \(contactName)"
             }
+            
+            self.applyButton.isHidden = (self.presenter.shouldDisplayApplyButton() == false)
         }
     }
     

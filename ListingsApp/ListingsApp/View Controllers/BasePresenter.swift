@@ -15,6 +15,7 @@ protocol BasePresenterProtocol: class {
 class BasePresenter: NSObject {
     var serviceFactory: ServiceFactoryProtocol
     
+    // Dependency injection so that it is easy to swap out in testing.
     init(serviceFactory: ServiceFactoryProtocol = ServiceFactory.shared) {
         self.serviceFactory = serviceFactory
     }

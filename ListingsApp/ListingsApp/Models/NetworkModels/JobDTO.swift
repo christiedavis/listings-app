@@ -20,7 +20,6 @@ enum JobType: String, Codable {
             return "Parttime"
         }
     }
-
 }
 
 struct JobDTO: Codable {

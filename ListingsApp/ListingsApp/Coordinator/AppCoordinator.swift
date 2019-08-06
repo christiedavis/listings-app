@@ -28,12 +28,11 @@ extension AppCoordinator: AppCoordinatorDelegate {
         window?.makeKeyAndVisible()
         navigationController = navController
         
-        self.goToUsersAccountView()
+        self.goToAllListingsView()
         // This is where we would usually have logic to detirmine where the app is going - but this a simple one vc app so it always goes the same way.
-        
     }
     
-    func goToUsersAccountView() {
+    func goToAllListingsView() {
         let viewController = ListingsViewController()
         viewController.presenter.coordinator = self
         

@@ -12,6 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListingsViewController" customModule="ListingsApp" customModuleProvider="target">
             <connections>
+                <outlet property="errorButton" destination="qRy-9H-0DX" id="n0p-fU-sQv"/>
+                <outlet property="errorLabel" destination="jOJ-3c-cZc" id="Zql-qd-Awr"/>
+                <outlet property="errorView" destination="IiB-ur-RcP" id="Aip-8n-HCi"/>
+                <outlet property="loadingView" destination="frg-d2-Dlk" id="gfK-kc-KpI"/>
                 <outlet property="tableView" destination="XyL-RZ-iN9" id="Y7F-8G-Ojf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,18 +26,63 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XyL-RZ-iN9">
-                    <rect key="frame" x="0.0" y="64" width="414" height="798"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IiB-ur-RcP">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOJ-3c-cZc">
+                            <rect key="frame" x="44" y="320.5" width="326" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRy-9H-0DX">
+                            <rect key="frame" x="44" y="381.5" width="326" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="wxm-KL-TGl"/>
+                            </constraints>
+                            <state key="normal" title="Tap to retry"/>
+                            <connections>
+                                <action selector="errorTapped:" destination="-1" eventType="touchUpInside" id="fdy-J3-Ny3"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="jOJ-3c-cZc" firstAttribute="leading" secondItem="IiB-ur-RcP" secondAttribute="leading" constant="44" id="8Gm-dz-7Ud"/>
+                        <constraint firstItem="qRy-9H-0DX" firstAttribute="top" secondItem="jOJ-3c-cZc" secondAttribute="bottom" constant="44" id="K6l-HT-P9x"/>
+                        <constraint firstItem="jOJ-3c-cZc" firstAttribute="centerY" secondItem="IiB-ur-RcP" secondAttribute="centerY" constant="-80" id="QTI-Bp-4Bb"/>
+                        <constraint firstItem="qRy-9H-0DX" firstAttribute="leading" secondItem="IiB-ur-RcP" secondAttribute="leading" constant="44" id="jme-hw-wWC"/>
+                        <constraint firstAttribute="trailing" secondItem="jOJ-3c-cZc" secondAttribute="trailing" constant="44" id="kMX-F2-coF"/>
+                        <constraint firstItem="jOJ-3c-cZc" firstAttribute="centerX" secondItem="IiB-ur-RcP" secondAttribute="centerX" id="lId-B0-OKX"/>
+                        <constraint firstAttribute="trailing" secondItem="qRy-9H-0DX" secondAttribute="trailing" constant="44" id="nL8-fv-rPW"/>
+                    </constraints>
+                </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="frg-d2-Dlk">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="color" name="systemPurpleColor" catalog="System" colorSpace="catalog"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="XyL-RZ-iN9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="F9W-7z-fhY"/>
+                <constraint firstItem="frg-d2-Dlk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2vg-hN-QIx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="IiB-ur-RcP" secondAttribute="bottom" id="7h8-nH-ngg"/>
+                <constraint firstItem="XyL-RZ-iN9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="F9W-7z-fhY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="frg-d2-Dlk" secondAttribute="bottom" id="IWz-Hu-ea4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IiB-ur-RcP" secondAttribute="trailing" id="LKB-Al-Upr"/>
+                <constraint firstItem="IiB-ur-RcP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="fHv-7N-EzT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XyL-RZ-iN9" secondAttribute="trailing" id="pfz-lK-0V5"/>
+                <constraint firstItem="IiB-ur-RcP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qSx-Ms-sdu"/>
                 <constraint firstItem="XyL-RZ-iN9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qxa-7k-1zu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="frg-d2-Dlk" secondAttribute="trailing" id="sLm-SK-dfq"/>
+                <constraint firstItem="frg-d2-Dlk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="uoP-ok-kDj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="XyL-RZ-iN9" secondAttribute="bottom" id="yKh-3k-qKB"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
         </view>
     </objects>
 </document>
