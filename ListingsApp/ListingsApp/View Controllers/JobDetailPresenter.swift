@@ -31,8 +31,6 @@ extension JobDetailPresenter: JobDetailPresenterProtocol {
     }
     
     func load() {
-        
-        
     }
     
     var screenTitle: String {
@@ -44,14 +42,21 @@ extension JobDetailPresenter: JobDetailPresenterProtocol {
     }
     
     func applyTapped() {
-        if let website = self.job?.applicationDetails?.website {
-            guard let url = URL(string: website) else {
-                return
-            }
+        if let url = self.getJobAction() {
             
             let svc = SFSafariViewController(url: url)
             svc.modalPresentationStyle = .overFullScreen
             self.view?.navigationController?.present(svc, animated: true, completion: nil)
         }
+    }
+    
+    func getJobAction() -> URL? {
+        if let website = self.job?.applicationDetails?.website {
+            guard let url = URL(string: website) else {
+                return nil
+            }
+            return url
+        }
+        return nil
     }
 }

@@ -11,6 +11,8 @@
 		D996EC7268AEFD96C08EA5F8 /* Pods_ListingsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB59E6DF94EB39F41E6BD67 /* Pods_ListingsApp.framework */; };
 		F54F2F5C22F8F62C00084F24 /* PersistanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F2F5B22F8F62C00084F24 /* PersistanceHelper.swift */; };
 		F54F2F5D22F903B600084F24 /* ManagedObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594F65722F8BA440028C59E /* ManagedObjectExtension.swift */; };
+		F54F2F5F22F9182D00084F24 /* MockServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F2F5E22F9182D00084F24 /* MockServiceFactory.swift */; };
+		F54F2F6122F927A300084F24 /* ListingDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F2F6022F927A300084F24 /* ListingDetailTests.swift */; };
 		F58BAF8522F6DA32006E97DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58BAF8422F6DA32006E97DD /* AppDelegate.swift */; };
 		F58BAF8D22F6DA32006E97DD /* ListingsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F58BAF8B22F6DA32006E97DD /* ListingsApp.xcdatamodeld */; };
 		F58BAF9222F6DA32006E97DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58BAF9022F6DA32006E97DD /* LaunchScreen.storyboard */; };
@@ -57,6 +59,8 @@
 		DF5571AE3B1C7A6E7FB36BC2 /* Pods-ListingsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListingsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ListingsApp/Pods-ListingsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E7F1DA46783092C52DFDBE29 /* Pods-ListingsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListingsAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ListingsAppTests/Pods-ListingsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F54F2F5B22F8F62C00084F24 /* PersistanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceHelper.swift; sourceTree = "<group>"; };
+		F54F2F5E22F9182D00084F24 /* MockServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceFactory.swift; sourceTree = "<group>"; };
+		F54F2F6022F927A300084F24 /* ListingDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailTests.swift; sourceTree = "<group>"; };
 		F58BAF8122F6DA32006E97DD /* ListingsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListingsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58BAF8422F6DA32006E97DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F58BAF8C22F6DA32006E97DD /* ListingsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ListingsApp.xcdatamodel; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				F58BAF9C22F6DA33006E97DD /* ListingsAppTests.swift */,
+				F54F2F6022F927A300084F24 /* ListingDetailTests.swift */,
+				F54F2F5E22F9182D00084F24 /* MockServiceFactory.swift */,
 				F58BAF9E22F6DA33006E97DD /* Info.plist */,
 			);
 			path = ListingsAppTests;
@@ -472,7 +478,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F54F2F5F22F9182D00084F24 /* MockServiceFactory.swift in Sources */,
 				F58BAF9D22F6DA33006E97DD /* ListingsAppTests.swift in Sources */,
+				F54F2F6122F927A300084F24 /* ListingDetailTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
