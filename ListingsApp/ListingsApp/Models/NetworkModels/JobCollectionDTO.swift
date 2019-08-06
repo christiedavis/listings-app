@@ -14,4 +14,8 @@ class JobCollectionDTO: Codable {
     enum CodingKeys: String, CodingKey {
         case list = "List"
     }
+    
+    init(jobsList: [JobDTO]) {
+        self.list = jobsList
+    }
 }

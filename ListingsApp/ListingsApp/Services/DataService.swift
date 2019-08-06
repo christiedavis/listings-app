@@ -10,6 +10,7 @@ import UIKit
 
 protocol DataServiceProtocol: class {
     func getJobs() -> [JobDTO]
+    func updateJobs(_ jobList: [JobDTO]?)
 }
 
 class DataService {
@@ -18,8 +19,21 @@ class DataService {
 
 extension DataService: DataServiceProtocol {
     func getJobs() -> [JobDTO] {
-//        let jobs: [Job]? = Job.lookup()
-        return []
+        let jobs: [Listing]? = Listing.lookup()
+        let dtoArray = jobs?.map({ $0.dto() })
+        return dtoArray ?? []
+    }
+    
+    
+    func updateJobs(_ jobList: [JobDTO]?) {
+        jobList?.forEach { (jobDto) in
+            if let existingJob: Listing = Listing.lookup(byIdentifier: jobDto.identifier) {
+                existingJob.update(fromDTO: jobDto)
+            } else {
+                _ = Listing.newObject(jobDto: jobDto)
+            }
+        }
+        PersistenceHelper.shared().saveContext()
     }
 }
 

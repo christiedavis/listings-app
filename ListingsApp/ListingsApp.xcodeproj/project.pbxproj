@@ -10,6 +10,7 @@
 		D98EE14DE73C728D5D7E4BBA /* Pods_ListingsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029F0C3C1B0BF81450993201 /* Pods_ListingsAppTests.framework */; };
 		D996EC7268AEFD96C08EA5F8 /* Pods_ListingsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB59E6DF94EB39F41E6BD67 /* Pods_ListingsApp.framework */; };
 		F54F2F5C22F8F62C00084F24 /* PersistanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F2F5B22F8F62C00084F24 /* PersistanceHelper.swift */; };
+		F54F2F5D22F903B600084F24 /* ManagedObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594F65722F8BA440028C59E /* ManagedObjectExtension.swift */; };
 		F58BAF8522F6DA32006E97DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58BAF8422F6DA32006E97DD /* AppDelegate.swift */; };
 		F58BAF8D22F6DA32006E97DD /* ListingsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F58BAF8B22F6DA32006E97DD /* ListingsApp.xcdatamodeld */; };
 		F58BAF9222F6DA32006E97DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58BAF9022F6DA32006E97DD /* LaunchScreen.storyboard */; };
@@ -444,6 +445,7 @@
 				F594F67822F8BF7E0028C59E /* Listing+CoreDataProperties.swift in Sources */,
 				F5BC3C7822F6DD5A006C3B7B /* ServiceFactory.swift in Sources */,
 				F5BC3C7B22F6E17E006C3B7B /* JobDTO.swift in Sources */,
+				F54F2F5D22F903B600084F24 /* ManagedObjectExtension.swift in Sources */,
 				F591DAE522F831BC00FC215E /* JobCollectionDTO.swift in Sources */,
 				F591DADC22F82A0200FC215E /* ListingsViewController.swift in Sources */,
 				F591DAE322F82F8500FC215E /* DataService.swift in Sources */,

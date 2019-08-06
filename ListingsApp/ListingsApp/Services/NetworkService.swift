@@ -15,7 +15,6 @@ protocol JobNetworkServiceProtocol: class {
 
 class JobNetworkService: BaseNetworkService {
     private let accountsPath = "Search/Jobs.json"
-
 }
 
 extension JobNetworkService: JobNetworkServiceProtocol {

@@ -26,14 +26,27 @@ class ServiceFactory {
     
     init() {
         self.networkService = JobNetworkService()
+        self.dataService = DataService()
     }
     
     var networkService: JobNetworkServiceProtocol
+    var dataService: DataServiceProtocol
 }
 
 extension ServiceFactory: ServiceFactoryProtocol {
     func getJobs() -> Promise<JobCollectionDTO> {
         return self.networkService.getJobs()
+            .recover { (error) -> Guarantee<JobCollectionDTO> in
+                let cachedJobs = self.dataService.getJobs()
+                if cachedJobs.isEmpty {
+                    // if there is no cache - throw the error to display
+                    throw error
+                }
+                return Guarantee.value(JobCollectionDTO(jobsList: cachedJobs))
+            }
+            .then { (collection) -> Promise<JobCollectionDTO> in
+                self.dataService.updateJobs(collection.list)
+                return Promise.value(collection)
+            }
     }
-
 }

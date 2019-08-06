@@ -14,6 +14,7 @@ import PromiseKit
     func saveContext()
     func loadPersistentStores() -> Promise<NSPersistentContainer>
     static func shared() -> PersistenceHelperProtocol
+    func managedObjectContext() -> NSManagedObjectContext 
 }
 
 public class PersistenceHelper: PersistenceHelperProtocol {

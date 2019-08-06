@@ -24,6 +24,10 @@ enum JobType: String, Codable {
 }
 
 struct JobDTO: Codable {
+    var identifier: String {
+        return "\(listingId ?? 0)"
+    }
+    
     var listingId: Int?
     var title: String?
     var body: String?
